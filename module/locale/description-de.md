@@ -1,3 +1,3 @@
-# Über Arbeitern bauen 1.0.3
+# Build Over Workers 1.0.3
 
-Baue über befreundeten Arbeitern. Sie weichen, wenn möglich, auf ein freies Feld in der Nähe aus.
+Ermöglicht das Platzieren von Gebäuden und Mauern dort, wo freundliche Arbeiter stehen. Die Arbeiter weichen auf ein nahes freies Feld aus, sofern eines verfügbar ist. Gebäude- und Mauerplatzierung lassen sich getrennt einstellen.

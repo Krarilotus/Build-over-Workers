@@ -1,13 +1,12 @@
-buildings: Gebäude über Arbeitern
-buildings_tooltip: Bauarbeiter weichen aus. Feinde und Soldaten blockieren weiterhin. Aus stellt das ursprüngliche
-  Verhalten wieder her.
-walls: Mauern über Arbeitern
-walls_tooltip: Arbeiter werden möglichst auf derselben Seite versetzt. Aus gilt für Spieler und KI.
-keep_on_walls: Einheiten auf Mauern behalten
-keep_on_walls_tooltip: Beim Reparieren bleiben Einheiten auf der Mauer oder Treppe stehen.
-allies: Auch verbündete Arbeiter
-allies_tooltip: Mit dieser Option weichen auch Arbeiter von Mitspielern im eigenen Team aus.
-balance_changes: Balance Changes
-bugfixes: Bugfixes
+buildings: Gebäude über Arbeitern platzieren
+buildings_tooltip: Du kannst Gebäude direkt auf deinen eigenen Arbeitern platzieren. Sie treten auf das nächste freie Feld neben dem neuen Gebäude zur Seite und setzen ihre Arbeit fort. Soldaten und feindliche Einheiten blockieren den Bauplatz weiterhin wie gewohnt. Ist dies deaktiviert, gilt wieder die ursprüngliche Gebäudeplatzierung.
+walls: Mauern über Arbeitern platzieren
+walls_tooltip: 'Dasselbe für Mauern: Im Weg stehende Arbeiter werden neben die Mauer verschoben, möglichst auf dieselbe Seite, auf der sie standen. Ist dies deaktiviert, gilt wieder die ursprüngliche Mauerplatzierung für Menschen und KI.'
+keep_on_walls: Reparieren lässt Truppen auf Mauern stehen
+keep_on_walls_tooltip: Truppen und Personen auf einer Mauer oder Treppe bleiben beim Reparieren dieser Mauer stehen. Nur Personen am Boden unter einer neuen Mauer werden beiseitegeschoben.
+allies: Arbeiter Verbündeter gelten als freundlich
+allies_tooltip: Auch über Arbeitern von Verbündeten deines Teams darf gebaut werden. Ist dies deaktiviert, gilt das nur für deine eigenen Arbeiter.
+balance_changes: Balance-Änderungen
+bugfixes: Fehlerkorrekturen
 tags.behavior: Verhalten
 tags.bugfixes: Fehlerkorrekturen

@@ -1,14 +1,12 @@
-buildings: Edificios sobre trabajadores
-buildings_tooltip: Los trabajadores se apartan. Enemigos y soldados siguen bloqueando. Al apagarlo vuelve
-  la regla original.
-walls: Muros sobre trabajadores
-walls_tooltip: Si es posible, los trabajadores quedan en el mismo lado. Apagarlo restaura las reglas de
-  jugador e IA.
-keep_on_walls: Mantener unidades en los muros
-keep_on_walls_tooltip: Al reparar, las unidades sobre muros o escaleras conservan su posición.
-allies: Trabajadores aliados
-allies_tooltip: También pueden apartarse los trabajadores de los compañeros de equipo.
-balance_changes: Balance Changes
-bugfixes: Bugfixes
+buildings: Colocar edificios sobre trabajadores
+buildings_tooltip: Puedes colocar un edificio encima de tus propios trabajadores. Se apartan a la casilla libre más cercana junto al nuevo edificio y siguen con su tarea. Los soldados y las unidades enemigas siguen bloqueando el sitio como antes. Desactivar esto restaura la colocación original de edificios.
+walls: Colocar muros sobre trabajadores
+walls_tooltip: 'Lo mismo para los muros: los trabajadores que estorben se desplazan junto al muro, si es posible al mismo lado en el que estaban. Desactivar esto restaura la colocación original de muros para jugadores e IA.'
+keep_on_walls: Reparar un muro deja a quienes están encima
+keep_on_walls_tooltip: Las tropas y personas que están sobre un muro o escalera permanecen en su sitio al reparar ese muro. Solo se aparta a quienes están en el suelo debajo de un muro nuevo.
+allies: Los trabajadores aliados cuentan como amigos
+allies_tooltip: También puedes construir sobre trabajadores de jugadores de tu equipo. Si está desactivado, solo funciona con tus propios trabajadores.
+balance_changes: Cambios de equilibrio
+bugfixes: Correcciones
 tags.behavior: Comportamiento
 tags.bugfixes: Correcciones

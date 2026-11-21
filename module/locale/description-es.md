@@ -1,3 +1,3 @@
-# Construir sobre trabajadores 1.0.3
+# Build Over Workers 1.0.3
 
-Construye sobre trabajadores amigos. Se apartan a una casilla libre cercana si es posible.
+Permite colocar edificios o muros donde haya trabajadores amigos. Los trabajadores se apartan a una casilla libre cercana si hay alguna disponible. La colocación de edificios y muros se puede configurar por separado.

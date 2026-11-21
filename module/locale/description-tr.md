@@ -1,3 +1,3 @@
-# İşçilerin üstüne inşa 1.0.3
+# Build Over Workers 1.0.3
 
-Dost işçilerin bulunduğu yere inşa edin. Mümkünse yakındaki boş kareye geçerler.
+Dost işçilerin durduğu yere bina veya sur yerleştirmeni sağlar. Uygun bir yer varsa işçiler yakındaki boş bir kareye çekilir. Bina ve sur yerleştirme ayrı ayrı ayarlanabilir.

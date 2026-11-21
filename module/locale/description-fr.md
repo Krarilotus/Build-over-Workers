@@ -1,3 +1,3 @@
-# Construire sur les ouvriers 1.0.3
+# Build Over Workers 1.0.3
 
-Construisez sur les cases occupées par des ouvriers amis. Ils gagnent une case libre proche si possible.
+Permet de placer des bâtiments ou des murs là où se trouvent des ouvriers amis. Les ouvriers s'écartent vers une case libre voisine lorsqu'il y en a une. Le placement des bâtiments et des murs se configure séparément.

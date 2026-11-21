@@ -1,3 +1,3 @@
-# Építés munkások fölött 1.0.3
+# Build Over Workers 1.0.3
 
-Baráti munkások fölé is építhetsz. Ha lehet, közeli szabad mezőre lépnek.
+Lehetővé teszi épületek és falak elhelyezését ott, ahol barátságos munkások állnak. A munkások egy közeli szabad mezőre lépnek, ha van ilyen. Az épületek és falak elhelyezése külön beállítható.
