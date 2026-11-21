@@ -1,0 +1,13 @@
+buildings: Gebäude über Arbeitern
+buildings_tooltip: Bauarbeiter weichen aus. Feinde und Soldaten blockieren weiterhin. Aus stellt das ursprüngliche
+  Verhalten wieder her.
+walls: Mauern über Arbeitern
+walls_tooltip: Arbeiter werden möglichst auf derselben Seite versetzt. Aus gilt für Spieler und KI.
+keep_on_walls: Einheiten auf Mauern behalten
+keep_on_walls_tooltip: Beim Reparieren bleiben Einheiten auf der Mauer oder Treppe stehen.
+allies: Auch verbündete Arbeiter
+allies_tooltip: Mit dieser Option weichen auch Arbeiter von Mitspielern im eigenen Team aus.
+balance_changes: Balance Changes
+bugfixes: Bugfixes
+tags.behavior: Verhalten
+tags.bugfixes: Fehlerkorrekturen

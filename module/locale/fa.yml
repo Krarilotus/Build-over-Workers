@@ -1,0 +1,12 @@
+buildings: ساختمان روی کارگر
+buildings_tooltip: کارگر کنار می‌رود. دشمن و سرباز همچنان مانع‌اند. در حالت خاموش قانون اصلی برقرار است.
+walls: دیوار روی کارگر
+walls_tooltip: کارگر در صورت امکان در همان سمت می‌ماند. خاموش‌کردن رفتار اصلی بازیکن و هوش مصنوعی را برمی‌گرداند.
+keep_on_walls: حفظ نیروهای روی دیوار
+keep_on_walls_tooltip: هنگام تعمیر، نیروهای روی دیوار یا پله در جای خود می‌مانند.
+allies: کارگران متحد
+allies_tooltip: کارگران هم‌تیمی نیز می‌توانند کنار بروند.
+balance_changes: Balance Changes
+bugfixes: Bugfixes
+tags.behavior: رفتار
+tags.bugfixes: رفع اشکال

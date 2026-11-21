@@ -1,0 +1,12 @@
+buildings: 在工人所在格建建筑
+buildings_tooltip: 工人会让开，敌人与士兵仍会阻挡建造。关闭后恢复原版行为。
+walls: 在工人所在格建墙
+walls_tooltip: 尽量让工人移到墙的同一侧。关闭后玩家与 AI 均恢复原版行为。
+keep_on_walls: 保留墙上单位
+keep_on_walls_tooltip: 修理时让墙上或楼梯上的单位留在原地。
+allies: 允许盟友工人让路
+allies_tooltip: 同队玩家的工人也可以为建造让开。
+balance_changes: Balance Changes
+bugfixes: Bugfixes
+tags.behavior: 行为
+tags.bugfixes: 错误修复

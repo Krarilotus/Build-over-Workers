@@ -1,0 +1,14 @@
+buildings: Épület munkás fölött
+buildings_tooltip: A munkás félreáll. Ellenség és katona továbbra is akadály. Kikapcsolva az eredeti szabály
+  él.
+walls: Fal munkás fölött
+walls_tooltip: A munkás lehetőleg ugyanazon az oldalon marad. Kikapcsolva a játékosra és az MI-re az eredeti
+  szabály él.
+keep_on_walls: Egységek maradnak a falon
+keep_on_walls_tooltip: Javításkor a falon vagy lépcsőn állók a helyükön maradnak.
+allies: Szövetséges munkások
+allies_tooltip: A csapattársak munkásai is félreállhatnak.
+balance_changes: Balance Changes
+bugfixes: Bugfixes
+tags.behavior: Viselkedés
+tags.bugfixes: Hibajavítások

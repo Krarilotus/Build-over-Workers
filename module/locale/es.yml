@@ -1,0 +1,14 @@
+buildings: Edificios sobre trabajadores
+buildings_tooltip: Los trabajadores se apartan. Enemigos y soldados siguen bloqueando. Al apagarlo vuelve
+  la regla original.
+walls: Muros sobre trabajadores
+walls_tooltip: Si es posible, los trabajadores quedan en el mismo lado. Apagarlo restaura las reglas de
+  jugador e IA.
+keep_on_walls: Mantener unidades en los muros
+keep_on_walls_tooltip: Al reparar, las unidades sobre muros o escaleras conservan su posición.
+allies: Trabajadores aliados
+allies_tooltip: También pueden apartarse los trabajadores de los compañeros de equipo.
+balance_changes: Balance Changes
+bugfixes: Bugfixes
+tags.behavior: Comportamiento
+tags.bugfixes: Correcciones

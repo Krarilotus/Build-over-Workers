@@ -1,0 +1,13 @@
+buildings: İşçi üstüne bina
+buildings_tooltip: İşçi çekilir. Düşmanlar ve askerler engel olmaya devam eder. Kapalıyken özgün kurallar
+  geçerlidir.
+walls: İşçi üstüne sur
+walls_tooltip: İşçi mümkünse aynı tarafta kalır. Kapalıyken oyuncu ve yapay zekâ için özgün davranış geçerlidir.
+keep_on_walls: Sur üstündekiler kalsın
+keep_on_walls_tooltip: Onarımda sur veya merdiven üstündeki birlikler yerinde kalır.
+allies: Müttefik işçiler
+allies_tooltip: Aynı takımdaki oyuncuların işçileri de çekilebilir.
+balance_changes: Balance Changes
+bugfixes: Bugfixes
+tags.behavior: Davranış
+tags.bugfixes: Hata düzeltmeleri

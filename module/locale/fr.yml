@@ -1,0 +1,14 @@
+buildings: Bâtiments sur les ouvriers
+buildings_tooltip: Les ouvriers s’écartent. Ennemis et soldats bloquent toujours la pose. Désactivez pour
+  revenir au jeu d’origine.
+walls: Murs sur les ouvriers
+walls_tooltip: Les ouvriers restent du même côté si possible. Désactiver rétablit les règles des joueurs
+  et de l’IA.
+keep_on_walls: Garder les unités sur les murs
+keep_on_walls_tooltip: Une réparation laisse en place les unités sur le mur ou l’escalier.
+allies: Ouvriers alliés
+allies_tooltip: Les ouvriers des joueurs de votre équipe peuvent aussi s’écarter.
+balance_changes: Modifications de l'équilibrage
+bugfixes: Corrections de bugs
+tags.behavior: Comportement
+tags.bugfixes: Corrections
