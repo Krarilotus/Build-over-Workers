@@ -245,5 +245,8 @@ def suite(ext, config=None):
 for ext in (False, True):
     suite(ext, {})
     suite(ext, {'allies': False})
-    suite(ext, {'buildings': False, 'walls': False})
+    for buildings, walls in ((False, False), (True, False), (False, True)):
+        H = Host(extreme=ext, config={'buildings': buildings, 'walls': walls})
+        check('patch count with buildings=%s walls=%s' % (buildings, walls),
+              len(H.patched), buildings * 3 + walls * 5)
 print('%d checks, %d failed' % (COUNT[0], len(FAILS)))

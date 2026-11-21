@@ -301,24 +301,32 @@ end
 local function enable(self, config)
   local buildings = setting(config, "buildings")
   local walls = setting(config, "walls")
+  if not buildings and not walls then return end
   local allies = setting(config, "allies")
   local keepOnWalls = setting(config, "keepOnWalls")
 
-  local placeTest = scan(AOB_PLACE_TEST, "the building placement test")
-  local wallTest = scan(AOB_WALL_TEST, "the wall placement test")
-  local placeUnits = scan(AOB_PLACE_UNITS, "where a new building meets units")
-  local wallUnits = scan(AOB_WALL_UNITS, "where a new wall meets units")
-  local placeEnd = scan(AOB_PLACE_END, "the end of building placement") + PLACE_END.hook
-  local wallEnd = scan(AOB_WALL_END, "the end of wall placement") + WALL_END.hook
-  local aiWallUnits = scan(AOB_AI_WALL_UNITS, "where an AI wall meets units")
-  local aiWallEnd = scan(AOB_AI_WALL_END, "the end of AI wall placement") + AI_WALL_END.hook
+  local placeTest, placeUnits, placeEnd
+  if buildings then
+    placeTest = scan(AOB_PLACE_TEST, "the building placement test")
+    placeUnits = scan(AOB_PLACE_UNITS, "where a new building meets units")
+    placeEnd = scan(AOB_PLACE_END, "the end of building placement") + PLACE_END.hook
+  end
+  local wallTest, wallUnits, wallEnd, aiWallUnits, aiWallEnd
+  if walls then
+    wallTest = scan(AOB_WALL_TEST, "the wall placement test")
+    wallUnits = scan(AOB_WALL_UNITS, "where a new wall meets units")
+    wallEnd = scan(AOB_WALL_END, "the end of wall placement") + WALL_END.hook
+    aiWallUnits = scan(AOB_AI_WALL_UNITS, "where an AI wall meets units")
+    aiWallEnd = scan(AOB_AI_WALL_END, "the end of AI wall placement") + AI_WALL_END.hook
+  end
   local setPos = scan(AOB_SET_POSITION, "where a unit is put down")
   local setDest = scan(AOB_SET_DESTINATION, "the unit route search") - SET_DESTINATION_START
   local flags = core.readInteger(scan(AOB_TILE_FLAGS, "the tile flags") + TILE_FLAGS_OPERAND)
 
-  local units = core.readInteger(placeTest + 9) - U_TYPE
+  local unitTypeAddress = placeTest and core.readInteger(placeTest + 9) or core.readInteger(wallTest + 20)
+  local units = unitTypeAddress - U_TYPE
   local tms = flags - TMS_FLAGS
-  if core.readInteger(wallTest + 20) - U_TYPE ~= units then
+  if placeTest and wallTest and core.readInteger(wallTest + 20) ~= unitTypeAddress then
     error(MODULE_NAME .. ": the unit layout is not the one this module knows")
   end
   if readOperand(setDest, SET_DESTINATION_AREAS, "the area map") ~= tms + TMS_AREAS then
@@ -345,7 +353,7 @@ local function enable(self, config)
   end
 
   -- 1. Building over friendly workers.
-  if buildings or walls then
+  do
     local teams
     if allies then
       teams = core.readInteger(scan(AOB_PLAYER_TEAMS, "the player teams") + PLAYER_TEAMS_OPERAND)
@@ -384,25 +392,27 @@ local function enable(self, config)
   local queueTile = assemble(templates.queueTile, { QUEUE = m.queue, QUEUE_MAX = QUEUE_MAX })
   local drain = luaFunction("moving units out of a new building", makeDrain(m))
 
-  jumpTo(placeUnits, assemble(templates.placeUnits, {
-    UNIT_LAYER_OFF = TMS_UNITS, QUEUE_TILE = queueTile, RESUME = placeUnits + UNITS_SIZE,
-  }), UNITS_SIZE)
-  jumpTo(wallUnits, assemble(templates.wallUnits, {
-    UNIT_LAYER_OFF = TMS_UNITS, QUEUE_TILE = queueTile, RESUME = wallUnits + UNITS_SIZE,
-  }), UNITS_SIZE)
-  for _, e in ipairs({ { placeEnd, PLACE_END }, { wallEnd, WALL_END } }) do
-    jumpTo(e[1], assemble(templates.epilogue, {
-      QUEUE = m.queue, DRAIN = drain, FRAME = e[2].frame, ARGS = e[2].args,
+  local function hookPlacement(unitsSite, epilogueSite, template, epilogue)
+    jumpTo(unitsSite, assemble(template, {
+      UNIT_LAYER_OFF = TMS_UNITS, QUEUE_TILE = queueTile, RESUME = unitsSite + UNITS_SIZE,
+    }), UNITS_SIZE)
+    jumpTo(epilogueSite, assemble(templates.epilogue, {
+      QUEUE = m.queue, DRAIN = drain, FRAME = epilogue.frame, ARGS = epilogue.args,
     }), EPILOGUE_SIZE)
   end
-
-  -- 3. The AI's walls, laid tile by tile.
-  jumpTo(aiWallUnits, assemble(templates.aiWallUnits, {
-    UNIT_LAYER_OFF = TMS_UNITS, QUEUE_TILE = queueTile, RESUME = aiWallUnits + UNITS_SIZE,
-  }), UNITS_SIZE)
-  jumpTo(aiWallEnd, assemble(templates.aiWallEpilogue, {
-    QUEUE = m.queue, DRAIN = drain, ARGS = AI_WALL_END.args,
-  }), AI_WALL_END.size)
+  if buildings then
+    hookPlacement(placeUnits, placeEnd, templates.placeUnits, PLACE_END)
+  end
+  if walls then
+    hookPlacement(wallUnits, wallEnd, templates.wallUnits, WALL_END)
+    -- The AI lays walls tile by tile. It follows the same wall setting.
+    jumpTo(aiWallUnits, assemble(templates.aiWallUnits, {
+      UNIT_LAYER_OFF = TMS_UNITS, QUEUE_TILE = queueTile, RESUME = aiWallUnits + UNITS_SIZE,
+    }), UNITS_SIZE)
+    jumpTo(aiWallEnd, assemble(templates.aiWallEpilogue, {
+      QUEUE = m.queue, DRAIN = drain, ARGS = AI_WALL_END.args,
+    }), AI_WALL_END.size)
+  end
 end
 
 return {
