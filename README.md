@@ -1,5 +1,15 @@
 # Build Over Workers
 
+## UCP package
+
+Place buildings or walls where friendly workers are standing. The workers move to a nearby free tile when one is available. Building and wall placement can be configured separately.
+
+- Package version: **1.0.3**
+- Module directory: `module/`
+- Targets: Stronghold Crusader 1.41 and Stronghold Crusader Extreme 1.41
+- Requires UCP framework 3.0.7 and frontend 1.0.2 or a compatible later version
+
+
 A UCP3 module for Stronghold Crusader and Stronghold Crusader Extreme. You can place buildings
 and walls where your own (and, optionally, your allies') workers are standing; soldiers and
 enemy units still block. Anyone standing where a new building or wall goes up - yours or the
