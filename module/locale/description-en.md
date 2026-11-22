@@ -1,3 +1,3 @@
-# Build Over Workers 1.0.3
+# Build Over Workers
 
-Place buildings or walls where friendly workers are standing. The workers move to a nearby free tile when one is available. Building and wall placement can be configured separately.
+Lets you place buildings and walls where your workers are standing. Every part can be switched off in the settings.

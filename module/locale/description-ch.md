@@ -1,3 +1,2 @@
-# Build Over Workers 1.0.3
-
+# Build Over Workers
 允许在友方工人站立的位置放置建筑或城墙。若有空地，工人会自动退至附近空地。建筑与城墙放置可分别配置。
