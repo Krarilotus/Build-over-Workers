@@ -4,7 +4,6 @@
 
 Place buildings or walls where friendly workers are standing. The workers move to a nearby free tile when one is available. Building and wall placement can be configured separately.
 
-- Package version: **1.0.3**
 - Module directory: `module/`
 - Targets: Stronghold Crusader 1.41 and Stronghold Crusader Extreme 1.41
 - Requires UCP framework 3.0.7 and frontend 1.0.2 or a compatible later version
